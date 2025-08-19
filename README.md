@@ -29,10 +29,10 @@ LOGIN, REGISTER, LOGOUT, MAKE TRANSFERS, DEPOSIT/WITHDRAW AMOUNT, MANAGE BENEFIC
 
 MongoDB (mongoose) , NodeJS,  Inquirer, ExpressJS , JsonWebToken, Bcrypt, Axios, Vercel(hosting backend)
 
-## Screenshots
+<!-- ## Screenshots
 ![image](https://user-images.githubusercontent.com/109868197/224545285-705107c0-d4de-4071-8161-e1fec747d25c.png)
 ---------------------------------------------------------------------------------------------------------------
-![image](https://user-images.githubusercontent.com/109868197/224545334-2ef5aaa5-b210-4336-ad97-f97a849b52fe.png)
+![image](https://user-images.githubusercontent.com/109868197/224545334-2ef5aaa5-b210-4336-ad97-f97a849b52fe.png) -->
 
 
 ## Getting Started
