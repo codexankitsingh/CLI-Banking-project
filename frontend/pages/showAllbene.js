@@ -10,7 +10,7 @@ const showallbene = async (userid, token) => {
     .then((result) => {
       axios({
         method: "post",
-        url: "https://cli-banking.vercel.app/showallbene",
+        url: "http://localhost:3000/showallbene",
         headers: {
           "auth-token": token,
         },

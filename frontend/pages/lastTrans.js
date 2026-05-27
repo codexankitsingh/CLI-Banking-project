@@ -10,7 +10,7 @@ const lastTrans = async (userid, token) => {
     .then((result) => {
       axios({
         method: "post",
-        url: "https://cli-banking.vercel.app/last",
+        url: "http://localhost:3000/last",
         headers: {
           "auth-token": token,
         },

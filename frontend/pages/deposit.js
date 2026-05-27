@@ -17,7 +17,7 @@ const deposit = async (userid, token) => {
     .then((result) => {
       axios({
         method: "post",
-        url: "https://cli-banking.vercel.app/deposit",
+        url: "http://localhost:3000/deposit",
         headers: {
           "auth-token": token,
         },

@@ -32,7 +32,7 @@ const register = async () => {
     .then((ans) => {
       axios({
         method: "post",
-        url: "https://cli-banking.vercel.app/register",
+        url: "http://localhost:3000/register",
         data: {
           userid: ans.userid.trim(),
           password: ans.password.trim(),

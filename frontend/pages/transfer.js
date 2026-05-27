@@ -20,11 +20,15 @@ const transfer = async (userid, token) => {
       },
     ])
     .then((result) => {
+      const { v4: uuidv4 } = require('uuid');
+      const idempotencyKey = uuidv4();
+      
       axios({
         method: "post",
-        url: "https://cli-banking.vercel.app/transfer",
+        url: "http://localhost:3000/transfer", // Updated to local backend for testing
         headers: {
           "auth-token": token,
+          "Idempotency-Key": idempotencyKey
         },
         data: {
           userid: userid,

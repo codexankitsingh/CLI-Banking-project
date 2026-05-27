@@ -22,7 +22,7 @@ const addBene = async (userid, token) => {
     .then((result) => {
       axios({
         method: "post",
-        url: "https://cli-banking.vercel.app/addbene",
+        url: "http://localhost:3000/addbene",
         headers: {
           "auth-token": token,
         },

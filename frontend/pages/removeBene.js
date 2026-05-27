@@ -17,7 +17,7 @@ const removeBene = async (userid, token) => {
     .then((result) => {
       axios({
         method: "post",
-        url: "https://cli-banking.vercel.app/removebene",
+        url: "http://localhost:3000/removebene",
         headers: {
           "auth-token": token,
         },

@@ -11,7 +11,7 @@ const Balance = async (userid, token) => {
     .then((result) => {
       axios({
         method: "post",
-        url: "https://cli-banking.vercel.app/balance",
+        url: "http://localhost:3000/balance",
         headers: {
           "auth-token": token,
         },
