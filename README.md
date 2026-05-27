@@ -33,14 +33,14 @@ The architecture cleanly separates synchronous ledger operations from asynchrono
 graph TD
     Client[Client Request] -->|Idempotency-Key Header| API[Express API Gateway]
     
-    subgraph Core Banking Engine (Synchronous)
+    subgraph CoreBankingEngine ["Core Banking Engine (Synchronous)"]
         API --> TxManager[Transaction Manager]
         TxManager -->|1. Check Idempotency| IdemTable[(MySQL Idempotency)]
         TxManager -->|2. Verify Balance| Accounts[(MySQL Accounts)]
         TxManager -->|3. Atomic Entry| Ledger[(MySQL Ledger)]
     end
     
-    subgraph Event Dispatch System (Asynchronous)
+    subgraph EventDispatchSystem ["Event Dispatch System (Asynchronous)"]
         TxManager -->|Push Job| BullMQ[Redis BullMQ]
         BullMQ --> Worker[Webhook Worker]
         Worker -->|Redis Deduplication| RedisCache[(Redis Cache)]
